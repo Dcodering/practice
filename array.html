@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // alert(["Bilbo", NaN, "Nazgul"].indexOf(NaN))
+    // alert(["Bilbo", NaN, "Nazgul"].includes(NaN))
+
+let users = [
+  {id: 1, name: "John"},
+  {id: 2, name: "Pete"},
+  {id: 3, name: "Mary"}
+];
+
+let user = users.filter(item => item.id < 2);
+
+let user2 = users.findLastIndex(item => item.name !== 'Pete')
+
+alert(user2 && user)
+
+let arr = [2, 4, 32, 8, 6, 1];
+
+function compareNumeric(a, b){
+    return a > b? 1: a == b? 0 : -1
+}
+alert(arr.sort(compareNumeric));
+alert(arr.reverse());
+
+let names = "John, Peter, Abdul, Suleiman";
+
+let newArr = names.split(', ');
+
+for (arr of newArr) {
+    alert('Hello ' + arr)
+}
+
+let arr2 = [2, 4, 32, 8, 6, 1]
+let result = arr2.reduce((prev, current) => prev + current);
+
+alert(result);
+</script>
+</html>

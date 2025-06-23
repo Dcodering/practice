@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// There is a salaries object with arbitrary number of salaries.
+// Write the function sumSalaries(salaries) that returns the sum of all salaries using Object.values and the for..of loop.
+// If salaries is empty, then the result must be 0.
+
+function sumSalaries(salaries) {
+  return Object.values(salaries).reduce((a, b) => a + b, 0) // 650
+}
+
+// Write a function count(obj) that returns the number of properties in the object:
+function count(obj) {
+  return Object.keys(obj).length;
+}
+</script>
+</html>

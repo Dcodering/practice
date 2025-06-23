@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Create a function unique(arr) that should return an array with unique items of arr.
+    function unique(arr) {
+  return Array.from(new Set(arr));
+}
+
+// Write a function aclean(arr) that returns an array cleaned from anagrams.
+function aclean(arr) {
+  let map = new Map();
+
+  for (let word of arr) {
+     let sorted = word.toLowerCase().split('').sort().join(''); // (*)
+    map.set(sorted, word);
+  }
+
+  return Array.from(map.values());
+}
+
+let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+alert( aclean(arr) );
+</script>
+</html>
